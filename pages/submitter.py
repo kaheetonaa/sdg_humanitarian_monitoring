@@ -41,14 +41,14 @@ if code:
             st.write(ind_dataset[ind_dataset['Indicator'].isin(indicators)]['Indicators'])
 
     
-if st.button('Submit'):
-    if (collection.find_one({'platform':platform,'code':code})==None):
-        post={'platform':platform,'code':code,'indicators':indicators}
-        collection.insert_one(post)
-        st.write('Submitted')
-    else:
-        st.write('Existed. Not submit. Please check the database')
-   #check submitted
-   #input
+    if st.button('Submit'):
+        if (collection.find_one({'platform':platform,'code':code})==None):
+            post={'platform':platform,'code':code,'indicators':indicators}
+            collection.insert_one(post)
+            st.write('Submitted')
+        else:
+            st.write('Existed. Not submit. Please check the database')
+    #check submitted
+    #input
 
-st.dataframe(ind_dataset)
+    st.dataframe(ind_dataset)
