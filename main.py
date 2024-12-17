@@ -1,10 +1,18 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+from pymongo import MongoClient
 
 st.set_page_config(layout="wide")
 
+@st.cache_resource
+def init_connection():
+    return MongoClient("mongodb+srv://kuquanghuy:quanghuy123456@cluster0.6mzug.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
+client = init_connection()
+
+db=client['SDG-Humanitarian-Mapping']
+collection=db['SDG-Humanitarian-Mapping']
 
 columns=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q']
 np.random.seed(0)
@@ -35,6 +43,9 @@ for i in range(len(df_selected_indicators['Indicator'])):
     k= int(indicator.split('.')[0])-1
     j=df2[columns[k]].str.contains(indicator)
     level=0 #0= enhanced by GI, 1= enhanced by HM, 2= added by HM
+    project=0 #0 non project exist, project existed
+    if (collection.find_one({'indicators':indicator})!=None):
+        project=1
     if df_selected_indicators['HM-A'][i]==True:
         level=2
     if df_selected_indicators['HM-E'][i]==True:
@@ -48,8 +59,14 @@ for i in range(len(df_selected_indicators['Indicator'])):
                 color='#E0F8FF'
             case 2:
                 color='#62CBEC'
+        match project:
+            case 0:
+                stroke=' '
+            case 1:
+                stroke=' solid '
+
         if j[l]==True:
-            df2.loc[l,columns[k]]="<span style='display: inline-block; padding: .2em .5em .3em; border:2px dotted #1C2E33; border-radius: 10px; background: "+color+"; color: #1C2E33; font-weight: 600; margin: .25em .1em'>"+df2.loc[l,columns[k]]+"</span>"
+            df2.loc[l,columns[k]]="<span style='display: inline-block; padding: .2em .5em .3em; border:2px"+stroke+"#1C2E33; border-radius: 10px; background: "+color+"; color: #1C2E33; font-weight: 600; margin: .25em .1em'>"+df2.loc[l,columns[k]]+"</span>"
     #Rendering
 
 st.title('SDG and Humanitarian Mapping Monitoring')

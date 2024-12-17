@@ -1,2 +1,6 @@
 streamlit
 streamlit_tags
+pandas
+requests
+pymongo
+numpy
