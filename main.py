@@ -28,14 +28,30 @@ for i in df1['Indicators']:
     ind[k]=ind[k]+1
 #putting in indicators
 
-for i in df_selected_indicators['Indicator']:
-    k= int(i.split('.')[0])-1
-    j=df2[columns[k]].str.contains(i)
-    for l in range(len(j)):
-        if j[l]==True:
-            df2.loc[l,columns[k]]="<span style='display: inline-block; border-radius: 3px; padding: .2em .5em .3em; border-radius: 2px; background: blue; color: white; font-weight: 600; margin: .25em .1em'>"+df2.loc[l,columns[k]]+"</span>"
+df2=df2.fillna(' ')#replace nan with -
 
-#df2.loc[2,'B']="<span style='display: inline-block; border-radius: 3px; padding: .2em .5em .3em; border-radius: 2px; background: darkgreen; color: white; font-weight: 600; margin: .25em .1em'>1.1.1</span>"
+for i in range(len(df_selected_indicators['Indicator'])):
+    indicator=df_selected_indicators['Indicator'][i]
+    k= int(indicator.split('.')[0])-1
+    j=df2[columns[k]].str.contains(indicator)
+    level=0 #0= enhanced by GI, 1= enhanced by HM, 2= added by HM
+    if df_selected_indicators['HM-A'][i]==True:
+        level=2
+    if df_selected_indicators['HM-E'][i]==True:
+        level=1
+
+    for l in range(len(j)):
+        match level:
+            case 0:
+                color='lightgray'
+            case 1:
+                color='#E0F8FF'
+            case 2:
+                color='#62CBEC'
+        if j[l]==True:
+            df2.loc[l,columns[k]]="<span style='display: inline-block; padding: .2em .5em .3em; border:2px dotted #1C2E33; border-radius: 10px; background: "+color+"; color: #1C2E33; font-weight: 600; margin: .25em .1em'>"+df2.loc[l,columns[k]]+"</span>"
+    #Rendering
+
 st.title('SDG and Humanitarian Mapping Monitoring')
 st.write('---')
 st.markdown(df2.style.hide(axis = 0).hide(axis = 1).to_html(), unsafe_allow_html = True)
