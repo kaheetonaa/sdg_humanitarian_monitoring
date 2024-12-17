@@ -1,0 +1,64 @@
+Goal,Target,Indicator,Indicators,UNSD Indicator Codes†,Benefitting by geoinformation technology,DA (IAEG-SDG ),IAEG-SDG-WGI,GEO,HM-A,HM-E,Notes
+1,1.1,1.1.1,"1.1.1 Proportion of the population living below the international poverty line by sex, age, employment status and geographic location (urban/rural)",C010101,TRUE,Tier I,FALSE,FALSE,TRUE,FALSE,Building mapping with settlement data to determine urban/rural distribution
+1,1.4,1.4.1,1.4.1 Proportion of population living in households with access to basic services,C010401,TRUE,Tier I,FALSE,FALSE,TRUE,FALSE,Building mapping with POI mapping
+1,1.4,1.4.2,"1.4.2 Proportion of total adult population with secure tenure rights to land, (a) with legally recognized documentation, and (b) who perceive their rights to land as secure, by sex and type of tenure",C010402,TRUE,Tier II,FALSE,FALSE,TRUE,,Building mapping
+1,1.5,1.5.1,"1.5.1 Number of deaths, missing persons and directly affected persons attributed to disasters per 100,000 population",C200303,TRUE,,FALSE,FALSE,TRUE,,Damaged building mapping
+2,2.4,2.4.1,2.4.1 Proportion of agricultural area under productive and sustainable agriculture,C020401,TRUE,Tier II,TRUE,FALSE,,TRUE,Land cover mapping (Mapping agriculture area)
+3,3.5,3.5.1,"3.5.1 Coverage of treatment interventions (pharmacological, psychosocial and rehabilitation and aftercare services) for substance use disorders",C030501,TRUE,Tier II,FALSE,FALSE,TRUE,,POI Mapping(Treatment intervention distribution)
+3,3.6,3.6.1,3.6.1 Death rate due to road traffic injuries,C030601,TRUE,Tier I,FALSE,FALSE,TRUE,,POI Mapping (dangaerous traffic area mapping)
+3,3.8,3.8.1,3.8.1 Coverage of essential health services,C030801,TRUE,Tier I,FALSE,FALSE,TRUE,,Essential health services distribution mapping
+3,3.9,3.9.1,3.9.1 Mortality rate attributed to household and ambient air pollution,C030901,TRUE,Tier I,FALSE,TRUE,,TRUE,Building mapping (building and ambient air quality mapping)
+3,3.9,3.9.2,"3.9.2 Mortality rate attributed to unsafe water, unsafe sanitation and lack of hygiene (exposure to unsafe Water, Sanitation and Hygiene for All (WASH) services)",C030902,TRUE,Tier I,FALSE,FALSE,TRUE,,POI Mapping + Landcover mapping(water contamination source mapping)
+3,3.9,3.9.3,3.9.3 Mortality rate attributed to unintentional poisoning,C030903,TRUE,Tier I,FALSE,FALSE,TRUE,,POI Mapping + Landcover mapping(water contamination source mapping)
+3,3.c,3.c.1,3.c.1 Health worker density and distribution,C030c01,TRUE,Tier I,FALSE,FALSE,TRUE,,Building mapping(Health worker mapping)
+4,4.a,4.a.1,"4.a.1 Proportion of schools offering basic services, by type of service",C040a01,TRUE,Tier I,FALSE,FALSE,TRUE,,Building mapping - POI Mapping (School mapping)
+5,5.2,5.2.2,"5.2.2 Proportion of women and girls aged 15 years and older subjected to sexual violence by persons other than an intimate partner in the previous 12 months, by age and place of occurrence",C050202,TRUE,Tier II,FALSE,FALSE,TRUE,,POI Mapping (place of occurence mapping)
+5,5.4,5.4.1,"5.4.1 Proportion of time spent on unpaid domestic and care work, by sex, age and location",C050401,TRUE,Tier II,FALSE,FALSE,TRUE,,POI Mapping (unpaid domestic and care work location mapping)
+5,5.a,5.a.1,"5.a.1 (a) Proportion of total agricultural population with ownership or secure rights over agricultural land, by sex; and (b) share of women among owners or rights-bearers of agricultural land, by type of tenure",C050a01,TRUE,Tier II,FALSE,FALSE,,TRUE,Landcover mapping (Agriculture land mapping)
+6,6.1,6.1.1,6.1.1 Proportion of population using safely managed drinking water services,C060101,TRUE,Tier I,FALSE,FALSE,TRUE,,POI Mapping (managed drinking water source services)
+6,6.2,6.2.1,6.2.1 Proportion of population using (a) safely managed sanitation services and (b) a hand-washing facility with soap and water,C060201,TRUE,Tier I/II,FALSE,FALSE,TRUE,,POI Mapping (sanitation service mapping)
+6,6.3,6.3.1,6.3.1 Proportion of domestic and industrial wastewater flows safely treated,C060303,TRUE,Tier I/II,FALSE,TRUE,,TRUE,Waterway mapping + POI Mapping
+6,6.3,6.3.2,6.3.2 Proportion of bodies of water with good ambient water quality,C060302,TRUE,Tier II,TRUE,FALSE,,TRUE,Landscover mapping (area of bodies of water mapping)
+6,6.4,6.4.1,6.4.1 Change in water-use efficiency over time,C060401,TRUE,,FALSE,FALSE,,TRUE,Landcover mapping
+6,6.4,6.4.2,6.4.2 Level of water stress: freshwater withdrawal as a proportion of available freshwater resources,C060402,TRUE,Tier I,FALSE,TRUE,,TRUE,POI Mapping(freshwater withdrawal distribution)
+6,6.5,6.5.1,6.5.1 Degree of integrated water resources management,C060501,TRUE,Tier II,FALSE,TRUE,,TRUE,
+6,6.5,6.5.2,6.5.2 Proportion of transboundary basin area with an operational arrangement for water cooperation,C060502,TRUE,Tier I,TRUE,FALSE,,TRUE,Landcover mapping(transboundary basin area mapping)
+6,6.6,6.6.1,6.6.1 Change in the extent of water-related ecosystems over time,C060601,TRUE,Tier I,TRUE,FALSE,,TRUE,Landcover mapping (water-related ecosystems mapping)
+7,7.1,7.1.1,7.1.1 Proportion of population with access to electricity,C070101,TRUE,Tier I,FALSE,TRUE,,TRUE,POI Mapping (Electricity mapping )
+7,7.b,7.b.1,7.b.1 Installed renewable energy-generating capacity in developing and developed countries (in watts per capita),C200208,TRUE,,FALSE,FALSE,,TRUE,POI Mapping (Renewable energy generation mapping)
+8,8.10,8.10.1,"8.10.1 (a) Number of commercial bank branches per 100,000 adults and (b) number of automated teller machines (ATMs) per 100,000 adults",C081001,TRUE,Tier I,FALSE,FALSE,TRUE,,POI Mapping (Bank and ATM machine mapping)
+9,9.1,9.1.1,9.1.1 Proportion of the rural population who live within 2 km of an all-season road,C090101,TRUE,Tier II,TRUE,FALSE,,TRUE,Building mapping + Highway mapping(all-season road accessibility mapping)
+9,9.3,9.3.1,9.3.1 Proportion of small-scale industries in total industry value added,C090301,TRUE,Tier II,FALSE,FALSE,,TRUE,POI Mapping (small-scale industries distribution)
+9,9.4,9.4.1,9.4.1 CO2 emission per unit of value added,C090401,TRUE,Tier I,FALSE,TRUE,,,
+9,9.c,9.c.1,"9.c.1 Proportion of population covered by a mobile network, by technology",C090c01,TRUE,Tier I,TRUE,FALSE,,,
+10,10.7,10.7.2,"10.7.2 Proportion of countries with migration policies that facilitate orderly, safe, regular and responsible migration and mobility of people",C100702,TRUE,,FALSE,FALSE,TRUE,,Open mapping (Refugee mapping)
+10,10.7,10.7.4,"10.7.4 Proportion of the population who are refugees, by country of origin",C100704,TRUE,,FALSE,FALSE,,TRUE,Open mapping (Refugee mapping)
+11,11.1,11.1.1,"11.1.1 Proportion of urban population living in slums, informal settlements or inadequate housing",C110101,TRUE,Tier I,FALSE,TRUE,,TRUE,"Building mapping (slums, informal settlements or inadequate housing mapping)"
+11,11.2,11.2.1,"11.2.1 Proportion of population that has convenient access to public transport, by sex, age and persons with disabilities",C110201,TRUE,Tier II,TRUE,FALSE,,TRUE,POI Mapping (public transport accessibility mapping)
+11,11.3,11.3.1,11.3.1 Ratio of land consumption rate to population growth rate,C110301,TRUE,Tier II,TRUE,FALSE,,TRUE,Landcover Mapping (mapping land consumpation area mapping)
+11,11.4,11.4.1,"11.4.1 Total per capita expenditure on the preservation, protection and conservation of all cultural and natural heritage, by source of funding (public, private), type of heritage (cultural, natural) and level of government (national, regional, and local/municipal)",C110401,TRUE,Tier II,FALSE,FALSE,,TRUE,Open mapping (natural/cultural heritage mapping)
+11,11.5,11.5.1,"11.5.1 Number of deaths, missing persons and directly affected persons attributed to disasters per 100,000 population",C200303,TRUE,,FALSE,FALSE,,TRUE,Damaged building mapping
+11,11.5,11.5.2,11.5.2 Direct economic loss attributed to disasters in relation to global gross domestic product (GDP),C200211,TRUE,,FALSE,FALSE,,TRUE,Damaged building mapping
+11,11.5,11.5.3,"11.5.3 (a) Damage to critical infrastructure and (b) number of disruptions to basic services, attributed to disasters",C110503,TRUE,,FALSE,FALSE,,TRUE,POI Mapping
+11,11.6,11.6.1,"11.6.1 Proportion of municipal solid waste collected and managed in controlled facilities out of total municipal waste generated, by cities",C110603,TRUE,Tier I,FALSE,FALSE,TRUE,,POI Mapping (municipal solid waste collected and managed in controlled facilities mapping)
+11,11.6,11.6.2,11.6.2 Annual mean levels of fine particulate matter (e.g. PM2.5 and PM10) in cities (population weighted),C110602,TRUE,Tier I,FALSE,TRUE,,,Air quality mapping
+11,11.7,11.7.1,"11.7.1 Average share of the built-up area of cities that is open space for public use for all, by sex, age and persons with disabilities",C110701,TRUE,Tier II,TRUE,FALSE,,TRUE,Landcover mapping (Open space mapping)
+11,11.7,11.7.2,"11.7.2 Proportion of persons victim of non-sexual or sexual harassment, by sex, age, disability status and place of occurrence, in the previous 12 months",C110702,TRUE,Tier III,FALSE,FALSE,TRUE,,POI Mapping (harassment occurence place mapping)
+12,12.4,12.4.2,"12.4.2 (a) Hazardous waste generated per capita; and (b) proportion of hazardous waste treated, by type of treatment",C120402,TRUE,,FALSE,FALSE,,TRUE,POI Mapping (Hazardous waste treatment mapping)
+12,12.a,12.a.1,12.a.1 Installed renewable energy-generating capacity in developing and developed countries (in watts per capita),C200208,TRUE,Tier III,FALSE,TRUE,,TRUE,POI Mapping (Renewable energy generation mapping)
+13,13.1,13.1.1,"13.1.1 Number of deaths, missing persons and directly affected persons attributed to disasters per 100,000 population",C200303,TRUE,Tier II,FALSE,TRUE,,TRUE,Damaged building mapping
+14,14.1,14.1.1,14.1.1 (a) Index of coastal eutrophication; and (b) plastic debris density,C140101,TRUE,Tier II,FALSE,FALSE,TRUE,, POI Mapping (coastal eutrophication and plastic debris mapping)
+14,14.2,14.2.1,14.2.1 Number of countries using ecosystem-based approaches to managing marine areas,C140201,TRUE,Tier III,TRUE,FALSE,,,
+14,14.3,14.3.1,14.3.1 Average marine acidity (pH) measured at agreed suite of representative sampling stations,C140301,TRUE,Tier III,FALSE,TRUE,,,
+14,14.4,14.4.1,14.4.1 Proportion of fish stocks within biologically sustainable levels,C140401,TRUE,Tier I,FALSE,TRUE,,,
+14,14.5,14.5.1,14.5.1 Coverage of protected areas in relation to marine areas,C140501,TRUE,Tier I,TRUE,FALSE,,TRUE,Landcover mapping
+15,15.1,15.1.1,15.1.1 Forest area as a proportion of total land area,C150101,TRUE,Tier I,TRUE,FALSE,,TRUE,Landcover mapping(Forest area mapping)
+15,15.1,15.1.2,"15.1.2 Proportion of important sites for terrestrial and freshwater biodiversity that are covered by protected areas, by ecosystem type",C150102,TRUE,Tier I,TRUE,FALSE,,TRUE,Landcover mapping
+15,15.3,15.3.1,15.3.1 Proportion of land that is degraded over total land area,C150301,TRUE,Tier II,TRUE,FALSE,,TRUE,Landcover mapping(land degradation mapping)
+15,15.4,15.4.1,15.4.1 Coverage by protected areas of important sites for mountain biodiversity,C150401,TRUE,Tier I,TRUE,FALSE,,TRUE,Landcover mapping(mountainous protected areas mapping)
+15,15.4,15.4.2,15.4.2 (a) Mountain Green Cover Index and (b) proportion of degraded mountain land,C150402,TRUE,Tier I,FALSE,FALSE,,TRUE,Landcover mapping(Mountain Green Cover Index and mountain land degradation mapping)
+16,16.1,16.1.1,"16.1.1 Number of victims of intentional homicide per 100,000 population, by sex and age",C160101,TRUE,,FALSE,FALSE,,TRUE,Damaged building mapping
+16,16.1,16.1.2,"16.1.2 Conflict-related deaths per 100,000 population, by sex, age and cause",C160102,TRUE,,FALSE,FALSE,,TRUE,Damaged building mapping
+16,16.1,16.1.4,16.1.4 Proportion of population that feel safe walking alone around the area they live after dark,C160105,TRUE,,FALSE,FALSE,,TRUE,Open mapping (Area security mapping)
+17,17.6,17.6.1,"17.6.1 Fixed broadband subscriptions per 100 inhabitants, by speed",C170602,TRUE,Tier III,FALSE,TRUE,,,
+17,17.18,17.18.1,17.18.1 Statistical capacity indicators,C171804,TRUE,Tier III,FALSE,TRUE,,,
