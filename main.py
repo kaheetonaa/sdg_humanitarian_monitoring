@@ -13,6 +13,7 @@ client = init_connection()
 
 db=client['SDG-Humanitarian-Mapping']
 collection=db['SDG-Humanitarian-Mapping']
+platform = st.selectbox('Select Humanitarian Mapping Platform',['All','HOT-TM','Ushahidi','Mapswipe'])
 
 columns=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q']
 np.random.seed(0)
@@ -44,12 +45,20 @@ for i in range(len(df_selected_indicators['Indicator'])):
     j=df2[columns[k]].str.contains(indicator)
     level=0 #0= enhanced by GI, 1= enhanced by HM, 2= added by HM
     project=0 #0 non project exist, project existed
-    if (collection.find_one({'indicators':indicator})!=None):
-        project=1
-    if df_selected_indicators['HM-A'][i]==True:
-        level=2
-    if df_selected_indicators['HM-E'][i]==True:
-        level=1
+    if (platform=='All'):
+        if (collection.find_one({'indicators':indicator,'platform':platform})!=None):
+            project=1
+        if df_selected_indicators['HM-A'][i]==True:
+            level=2
+        if df_selected_indicators['HM-E'][i]==True:
+            level=1
+    else:
+        if (collection.find_one({'indicators':indicator,'platform':platform})!=None):
+            project=1
+        if df_selected_indicators['HM-A'][i]==True:
+            level=2
+        if df_selected_indicators['HM-E'][i]==True:
+            level=1
 
     for l in range(len(j)):
         match level:
