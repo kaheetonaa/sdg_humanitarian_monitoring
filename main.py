@@ -46,7 +46,7 @@ for i in range(len(df_selected_indicators['Indicator'])):
     level=0 #0= enhanced by GI, 1= enhanced by HM, 2= added by HM
     project=0 #0 non project exist, project existed
     if (platform=='All'):
-        if (collection.find_one({'indicators':indicator,'platform':platform})!=None):
+        if (collection.find_one({'indicators':indicator})!=None):
             project=1
         if df_selected_indicators['HM-A'][i]==True:
             level=2
