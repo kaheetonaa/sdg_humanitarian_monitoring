@@ -19,7 +19,7 @@ print()
 
 ind_dataset=pd.read_csv('assets/Selected_Indicators.csv')
 
-platform = st.selectbox('Select Humanitarian Mapping Platform',['HOT-TM','Ushalhidi','Mapswipe'])
+platform = st.selectbox('Select Humanitarian Mapping Platform',['HOT-TM','Ushahidi','Mapswipe'])
 
 code=st.text_input(label='input project code here')
 
@@ -33,7 +33,7 @@ if code:
             st.write('Status:'+data['status'])
             st.write('Priority:'+data['projectPriority'])
             st.write('Difficulty:'+data['difficulty'])
-        case 'Ushalhidi':
+        case 'Ushahidi':
             st.write("Link: https://"+code+".ushahidi.io/map")
         case 'Mapswipe':
             st.write("Mapswipe project")
