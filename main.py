@@ -15,6 +15,8 @@ db=client['SDG-Humanitarian-Mapping']
 collection=db['SDG-Humanitarian-Mapping']
 platform = st.selectbox('Select Humanitarian Mapping Platform',['All','HOT-TM','Ushahidi','Mapswipe'])
 
+pd.DataFrame(list(collection.find({})))
+
 columns=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q']
 np.random.seed(0)
 df2 = pd.DataFrame(columns=columns) #np.zeros(shape=(15,17)).astype('U'),
