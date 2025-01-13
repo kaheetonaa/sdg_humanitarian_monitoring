@@ -15,7 +15,7 @@ db=client['SDG-Humanitarian-Mapping']
 collection=db['SDG-Humanitarian-Mapping']
 platform = st.selectbox('Select Humanitarian Mapping Platform',['All','HOT-TM','Ushahidi','Mapswipe'])
 
-pd.DataFrame(list(collection.find({})))
+all_data=pd.DataFrame(list(collection.find({})))
 
 columns=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q']
 np.random.seed(0)
@@ -85,3 +85,5 @@ st.write('---')
 st.markdown(df2.style.hide(axis = 0).hide(axis = 1).to_html(), unsafe_allow_html = True)
 
 df_selected_indicators
+
+all_data
