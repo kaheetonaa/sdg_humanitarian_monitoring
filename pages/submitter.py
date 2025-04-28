@@ -26,7 +26,7 @@ code=st.text_input(label='input project code here')
 if code:
     match platform:
         case 'HOT-TM':
-            data=requests.get('https://tasking-manager-tm4-production-api.hotosm.org/api/v2/projects/'+code+'/').json()
+            data=requests.get('https://tasking-manager-tm4-production-api.hotosm.org/api/v2/projects/'+code+'/',headers={"accept":"application/json","Authorization":"Token TVRBek5ERTVPRGsuYUFkTlZnLkFZU3NCNnpyV3ZFeG5QdnIzOWo1WTJnYlRqdw=="}).json()
             st.write('Link: https://tasks.hotosm.org/projects/'+code)
             st.write('Name:'+data['projectInfo']['name'])
             st.write('Name:'+data['projectInfo']['shortDescription'])
