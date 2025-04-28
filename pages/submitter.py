@@ -27,7 +27,7 @@ if code:
     match platform:
         case 'HOT-TM':
             data=requests.get('https://tasking-manager-production-api.hotosm.org/api/v2/projects/'+code+'/',headers={"accept":"application/json"}).json() #"Authorization":"TOK<TVRBek5ERTVPRGsuYUFkTlZnLkFZU3NCNnpyV3ZFeG5QdnIzOWo1WTJnYlRqdw==>
-            st.write(data)
+            #st.write(data)
             st.write('Link: https://tasks.hotosm.org/projects/'+code)
             st.write('Name:'+data['projectInfo']['name'])
             st.write('Name:'+data['projectInfo']['shortDescription'])
