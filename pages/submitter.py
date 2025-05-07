@@ -51,8 +51,10 @@ if code:
             post={'platform':platform,'code':code,'indicators':indicators}
             collection.insert_one(post)
             st.write('Submitted')
+            st.balloons()
         else:
             st.write('Existed. Not submit. Please check the database')
+            st.snow()
     #check submitted
     #input
 
