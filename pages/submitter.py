@@ -1,4 +1,5 @@
 import streamlit as st
+from streamlit.components.v1 import html
 import pandas as pd
 import requests
 from streamlit_tags import *
@@ -31,7 +32,7 @@ if code:
             st.write('Link: https://tasks.hotosm.org/projects/'+code)
             st.write('Name:'+data['projectInfo']['name'])
             st.write('Short description:'+data['projectInfo']['shortDescription'])
-            st.write('Description:'+data['projectInfo']['description'])
+            html('<p>Description:'+data['projectInfo']['description']+'</p>',height=100, scrolling=True))
             st.write('Status:'+data['status'])
             st.write('Priority:'+data['projectPriority'])
             st.write('Difficulty:'+data['difficulty'])
