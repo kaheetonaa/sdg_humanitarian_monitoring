@@ -31,6 +31,7 @@ if code:
             st.write('Link: https://tasks.hotosm.org/projects/'+code)
             st.write('Name:'+data['projectInfo']['name'])
             st.write('Name:'+data['projectInfo']['shortDescription'])
+            st.write('Name:'+data['projectInfo']['Description'])
             st.write('Status:'+data['status'])
             st.write('Priority:'+data['projectPriority'])
             st.write('Difficulty:'+data['difficulty'])
