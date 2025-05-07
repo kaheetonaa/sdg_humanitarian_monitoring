@@ -33,7 +33,7 @@ if code:
             st.write('Link: https://tasks.hotosm.org/projects/'+code)
             st.write('Name:'+data['projectInfo']['name'])
             st.write('Short description:'+data['projectInfo']['shortDescription'])
-            stx.scrollableTextbox('<p>Description:'+data['projectInfo']['description']+'</p>',height=100))
+            #stx.scrollableTextbox('<p>Description:'+data['projectInfo']['description']+'</p>',height=100))
             st.write('Status:'+data['status'])
             st.write('Priority:'+data['projectPriority'])
             st.write('Difficulty:'+data['difficulty'])
