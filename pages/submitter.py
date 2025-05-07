@@ -32,7 +32,7 @@ if code:
             st.write('Link: https://tasks.hotosm.org/projects/'+code)
             st.write('Name:'+data['projectInfo']['name'])
             st.write('Short description:'+data['projectInfo']['shortDescription'])
-            st.code('Description:'+data['projectInfo']['description'],wrap_lines =True,height=100)
+            st.code('Description:'+data['projectInfo']['description'],wrap_lines =True,height=200)
             st.write('Status:'+data['status'])
             st.write('Priority:'+data['projectPriority'])
             st.write('Difficulty:'+data['difficulty'])
