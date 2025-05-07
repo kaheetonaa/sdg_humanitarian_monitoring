@@ -38,6 +38,8 @@ if code:
             st.write('Difficulty:'+data['difficulty'])
         case 'Ushahidi':
             st.write("Link: https://"+code+".ushahidi.io/map")
+            usha_data=pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vTJbGpaOjy6iJwyL92c-s_Q2_8t8qwTe6THhb7LND-iv1AijzK5_yQrA-KFHS8xhpF55_YmEpqog23c/pub?gid=1903567796&single=true&output=csv')
+            st.write(usha_data)
         case 'Mapswipe':
             st.write("Mapswipe project")
     indicators = st_tags(label='Enter indicators contributed by the project here')
