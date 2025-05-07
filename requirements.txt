@@ -1,7 +1,7 @@
 streamlit
 streamlit_tags
+streamlit-scrollable-textbox
 pandas
 requests
 pymongo
 numpy
-streamlit-scrollable-textbox
