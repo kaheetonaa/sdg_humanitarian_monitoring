@@ -1,9 +1,10 @@
 import streamlit as st
-from streamlit.components.v1 import html
+import streamlit_scrollable_textbox as stx
 import pandas as pd
 import requests
 from streamlit_tags import *
 from pymongo import MongoClient
+
 
 st.set_page_config(layout="wide")
 
@@ -32,7 +33,7 @@ if code:
             st.write('Link: https://tasks.hotosm.org/projects/'+code)
             st.write('Name:'+data['projectInfo']['name'])
             st.write('Short description:'+data['projectInfo']['shortDescription'])
-            html('<p>Description:'+data['projectInfo']['description']+'</p>',height=100, scrolling=True))
+            stx.scrollableTextbox('<p>Description:'+data['projectInfo']['description']+'</p>',height=100))
             st.write('Status:'+data['status'])
             st.write('Priority:'+data['projectPriority'])
             st.write('Difficulty:'+data['difficulty'])
