@@ -38,7 +38,7 @@ if code:
             st.write('Difficulty:'+data['difficulty'])
         case 'Ushahidi':
             usha_data=pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vTJbGpaOjy6iJwyL92c-s_Q2_8t8qwTe6THhb7LND-iv1AijzK5_yQrA-KFHS8xhpF55_YmEpqog23c/pub?gid=1903567796&single=true&output=csv')
-            st.write("Link: "+usha_data[usha_data['objectID']==code]['url'].reset_index(drop=True)[0])
+            st.write("Link: https://"+usha_data[usha_data['objectID']==code]['url'].reset_index(drop=True)[0])
             st.write(usha_data[usha_data['objectID']==code]['excerpt'].reset_index(drop=True)[0])
         case 'Mapswipe':
             st.write("Mapswipe project")
